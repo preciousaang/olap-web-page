@@ -1,0 +1,506 @@
+<%- include('includes/header') -%>
+        <div class="row justify-content-center mx-2">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-center">Questionaire</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/olap/submit_question" method="post">
+                            <h4 class="card-title text-uppercase">Section A</h4>
+                            <h5>Personal Information</h5>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select name="gender" id="gender" class="form-control" required>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="age" class="form-label">Age</label>
+                                        <select name="age" id="age" class="form-control" required>
+                                            <option value="20-25">20 - 25</option>
+                                            <option value="26-30">26 - 30</option>
+                                            <option value="31-35">31 - 35</option>
+                                            <option value="36+">36+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="education" class="form-label">Education</label>
+                                        <select name="education" id="education" class="form-control" required>
+                                            <option value="WAEC">WAEC</option>
+                                            <option value="BSC">BSC</option>
+                                            <option value="HND">HND</option>
+                                            <option value="MASTERS">MASTERS</option>
+                                            <option value="PHD">PHD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title text-uppercase mt-5">
+                                Section B
+                            </h4>
+                            <h5 class="mt-2 mb-2">Please indicate the extent to which you are satisfied with the following items by ticking in any of the boxes represented by strongly agree (SA), agree (A), disagree (D) and strongly disagree (SD).</h5>
+
+                            <hr>
+                            <div class="d-block mb-3">
+                                <h6>4). I am aware of what OLAP is all about?</h6>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="SA" id="aware_of_olap" name="aware_of_olap" required>
+                                    <label class="form-check-label" for="aware_of_olap">
+                                        Strongly Agree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="A" id="aware_of_olap" name="aware_of_olap" required>
+                                    <label class="form-check-label" for="aware_of_olap">
+                                       Agree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="D" id="aware_of_olap" name="aware_of_olap" required>
+                                    <label class="form-check-label" for="aware_of_olap">
+                                        Disagree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="SD" id="aware_of_olap" name="aware_of_olap" required>
+                                    <label class="form-check-label" for="aware_of_olap">
+                                        Strongly Agree
+                                    </label>
+                                </div>
+                            </div>
+                            <h6 class="mt-5">What is the benefit of OLAP in an organization?</h6>
+                            <div class="table-responsive mb-3">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Statement</th>
+                                            <th>SA</th>
+                                            <th>A</th>
+                                            <th>D</th>
+                                            <th>SD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 5 -->
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Acquiring information </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="acquiring_information" name="acquiring_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="acquiring_information" name="acquiring_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="acquiring_information" name="acquiring_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="acquiring_information" name="acquiring_information" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 6 -->
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Searching/gathering information</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="searching_gathering_information" name="searching_gathering_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="searching_gathering_information" name="searching_gathering_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="searching_gathering_information" name="searching_gathering_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="searching_gathering_information" name="searching_gathering_information" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 7 -->
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Analyzing information</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="analyzing_information" name="analyzing_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="analyzing_information" name="analyzing_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="analyzing_information" name="analyzing_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="analyzing_information" name="analyzing_information" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 8 -->
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Delivery of information</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="delivery_of_information" name="delivery_of_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="delivery_of_information" name="delivery_of_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="delivery_of_information" name="delivery_of_information" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="delivery_of_information" name="delivery_of_information" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 9 -->
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Identify problems and ‘bottlenecks’ </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="identify_problems_and_bottlenecks" name="identify_problems_and_bottlenecks" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="identify_problems_and_bottlenecks" name="identify_problems_and_bottlenecks" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="identify_problems_and_bottlenecks" name="identify_problems_and_bottlenecks" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="identify_problems_and_bottlenecks" name="identify_problems_and_bottlenecks" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 10 -->
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Provide analysis of “the best” and “the worst” </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="provide_analysis_of_the_best_and_the_worst" name="provide_analysis_of_the_best_and_the_worst" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="provide_analysis_of_the_best_and_the_worst" name="provide_analysis_of_the_best_and_the_worst" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="provide_analysis_of_the_best_and_the_worst" name="provide_analysis_of_the_best_and_the_worst" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="provide_analysis_of_the_best_and_the_worst" name="provide_analysis_of_the_best_and_the_worst" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 11 -->
+                                        <tr>
+                                            <td>11</td>
+                                            <td>Provide analysis of products </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="provide_analysis_of_products" name="provide_analysis_of_products" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="provide_analysis_of_products" name="provide_analysis_of_products" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="provide_analysis_of_products" name="provide_analysis_of_products" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="provide_analysis_of_products" name="provide_analysis_of_products" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 12 -->
+                                        <tr>
+                                            <td>12</td>
+                                            <td>Provide analysis of employees </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="provide_analysis_of_employees" name="provide_analysis_of_employees" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="provide_analysis_of_employees" name="provide_analysis_of_employees" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="provide_analysis_of_employees" name="provide_analysis_of_employees" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="provide_analysis_of_employees" name="provide_analysis_of_employees" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 13 -->
+                                        <tr>
+                                            <td>13</td>
+                                            <td>Provide analysis of regions (using measurable metrics such as sales, costs or quantifiable results)  </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="provide_analysis_of_regions" name="provide_analysis_of_regions" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="provide_analysis_of_regions" name="provide_analysis_of_regions" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="provide_analysis_of_regions" name="provide_analysis_of_regions" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="provide_analysis_of_regions" name="provide_analysis_of_regions" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 14 -->
+                                        <tr>
+                                            <td>14</td>
+                                            <td>Perform ad-hoc analysis and answer questions related to departments ongoing operations, up to date financial standing and sales.</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="perform_adhoc_analysis" name="perform_adhoc_analysis" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="perform_adhoc_analysis" name="perform_adhoc_analysis" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="perform_adhoc_analysis" name="perform_adhoc_analysis" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="perform_adhoc_analysis" name="perform_adhoc_analysis" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                            <h6 class="mt-5">What are the challenges of using OLAP in an organization?</h6>
+                            <div class="table-responsive mb-3">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Statement</th>
+                                            <th>SA</th>
+                                            <th>A</th>
+                                            <th>D</th>
+                                            <th>SD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 15 -->
+                                        <tr>
+                                            <td>15</td>
+                                            <td>OLAP requires organizing data into a star or snowflake schema. These schemas are complicated to implement and administer.</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="schemas_are_complicated_to_implement_and_administer" name="schemas_are_complicated_to_implement_and_administer" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="schemas_are_complicated_to_implement_and_administer" name="schemas_are_complicated_to_implement_and_administer" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="schemas_are_complicated_to_implement_and_administer" name="schemas_are_complicated_to_implement_and_administer" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="schemas_are_complicated_to_implement_and_administer" name="schemas_are_complicated_to_implement_and_administer" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 16 -->
+                                        <tr>
+                                            <td>16</td>
+                                            <td>You cannot have large number of dimensions in a single OLAP cube</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" name="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" name="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" name="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" name="cannot_have_a_large_number_of_dimensions_in_a_single_olap_cube" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 17 -->
+                                        <tr>
+                                            <td>17</td>
+                                            <td>Transactional data cannot be accessed with OLAP system.</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="transactional_data_cannot_be_accessed_with_olap_system" name="transactional_data_cannot_be_accessed_with_olap_system" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="transactional_data_cannot_be_accessed_with_olap_system" name="transactional_data_cannot_be_accessed_with_olap_system" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="transactional_data_cannot_be_accessed_with_olap_system" name="transactional_data_cannot_be_accessed_with_olap_system" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="transactional_data_cannot_be_accessed_with_olap_system" name="transactional_data_cannot_be_accessed_with_olap_system" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 18 -->
+                                        <tr>
+                                            <td>18</td>
+                                            <td>Any modification in an OLAP cube needs a full update of the cube. This is a time-consuming process</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SA" id="modification_in_olap_cube_needs_full_update_of_the_cube" name="modification_in_olap_cube_needs_full_update_of_the_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="A" id="modification_in_olap_cube_needs_full_update_of_the_cube" name="modification_in_olap_cube_needs_full_update_of_the_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="D" id="modification_in_olap_cube_needs_full_update_of_the_cube" name="modification_in_olap_cube_needs_full_update_of_the_cube" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" value="SD" id="modification_in_olap_cube_needs_full_update_of_the_cube" name="modification_in_olap_cube_needs_full_update_of_the_cube" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-block mb-3">
+                                <h6>19.) OLAP has helped in effective decision support in an organization to a very high extent.</h6>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="SA" id="olap_has_helped_in_effective_decision_support" name="olap_has_helped_in_effective_decision_support" required>
+                                    <label class="form-check-label" for="olap_has_helped_in_effective_decision_support">
+                                        Strongly Agree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="A" id="olap_has_helped_in_effective_decision_support" name="olap_has_helped_in_effective_decision_support" required>
+                                    <label class="form-check-label" for="olap_has_helped_in_effective_decision_support">
+                                       Agree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="D" id="olap_has_helped_in_effective_decision_support" name="olap_has_helped_in_effective_decision_support" required>
+                                    <label class="form-check-label" for="olap_has_helped_in_effective_decision_support">
+                                        Disagree
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" value="SD" id="olap_has_helped_in_effective_decision_support" name="olap_has_helped_in_effective_decision_support" required>
+                                    <label class="form-check-label" for="olap_has_helped_in_effective_decision_support">
+                                        Strongly Agree
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-block mb-3">
+                                <h6>What are the possible solutions to the challenges of using OLAP in an organization?OLAP has helped in effective decision support in an organization to a very high extent.</h6>
+                                <textarea name="possible_solutions_to_challengers_using_olap" class="form-control" rows="6" required></textarea>
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary btn-block mt-4 mb-3">Submit Questionaire</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<%- include('includes/footer') -%>
