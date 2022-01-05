@@ -5,6 +5,10 @@ const router = express.Router();
 const { Answer } = require("../db/models");
 const { downloadResource } = require("../utils/util");
 
+router.get("/", (req, res) => {
+  return res.render("index");
+});
+
 router.get("/thank_you", (req, res) => {
   return res.render("thank_you");
 });
