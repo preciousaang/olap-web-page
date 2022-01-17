@@ -7,5 +7,5 @@ module.exports = {
   "models-path": path.resolve("db", "models"),
   "seeders-path": path.resolve("db", "seeders"),
   "migrations-path": path.resolve("db", "migrations"),
-  url: process.env.CLEARDB_DATABASE_URL,
+  url: process.env.DATABASE_URL,
 };
